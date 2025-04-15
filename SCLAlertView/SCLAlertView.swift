@@ -302,6 +302,12 @@ open class SCLAlertView: UIViewController {
     open var iconTintColor: UIColor?
     open var customSubview : UIView?
     
+    open var textViewDelegate : UITextViewDelegate? {
+        didSet {
+            viewText.delegate = textViewDelegate
+        }
+    }
+    
     // Members declaration
     var baseView = UIView()
     var labelTitle = UILabel()
