@@ -305,6 +305,7 @@ open class SCLAlertView: UIViewController {
     open var textViewDelegate : UITextViewDelegate? {
         didSet {
             viewText.delegate = textViewDelegate
+            viewText.isEditable = textViewDelegate != nil
         }
     }
     
